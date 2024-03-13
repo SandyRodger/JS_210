@@ -87,10 +87,44 @@ console.log(arr['0']);
 ```
 
 
+13.3.24
+
+- Falsey values
+- `===` v `==` and implicit conversion (it's a whole thing in JS)
+- Some people still use the `==`, but LS would have you use `===`.
+- Also `>` doesn't have a strict version, for example. 
+- coderpad: strict mode (won't run, if code contains mistakes, which JS would normally just run. This prevents common bugs)
+
+```
+/* truthiness: false and true vs. falsy and truthy
+
+Falsy values:
+
+undefined
+NaN
+false
+0
+''
+null
+
+*/
+
+// let a = undefined;
+
+// if (a) console.log('truthy');
+
+// console.log(null === null);
+
+// console.log(!!a);
 
 
+let str = 'hello';
 
+let arr = [];
 
+for (let i = 0; i < str.length; i += 1) {
+  arr[i] = str[i];
+}
 
-
-
+console.log(arr);
+```
