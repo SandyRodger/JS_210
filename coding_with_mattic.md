@@ -128,3 +128,70 @@ for (let i = 0; i < str.length; i += 1) {
 
 console.log(arr);
 ```
+
+
+22.4.24
+
+- I should wait until I've gone through all the material before I do Spot sessions, because eveyone is farther along.
+
+- converting strings into objects?!
+- 'literal' is not an object?
+  - Define literal
+- functions are objects (again) and can return other functions. 
+- Zane wants to talk about 'closures', which operates like scoping (for which an envelope may work as a mental model?). But closure is not the same as scope. 
+
+### EXAMPLE 1
+
+- big under the hood differences here:
+  - `if` takes a block
+  - We could variable shadow , byt using `let` , which would clarify that we are initializing rather than reassigning `a`.
+
+
+// Examine the code below. What structure does `{...}` define? Explain with reference to this structure why line 9, `console.log(a)`, outputs `5` but line 10, `console.log(b)`, throws a `ReferenceError` exception. What underlying principle about the structure does this demonstrate?
+
+
+```
+let a = 10;
+
+if (true) {
+  a = 5;
+  let b = 15;
+}
+
+console.log(a);  // 5
+console.log(b);  // Uncaught ReferenceError: b is not defined
+```
+
+- Zane Lee is in lesson 3 after only a few weeks. I need to hurry the fuck up.
+
+### EXAMPLE 2:
+
+// Explain why the following code outputs `Xyzzy` with precise language. What is the underlying concept?
+
+```
+let a = 'Xyzzy';
+
+function myValue(b) {   / function declaration
+  b[2] = '-';     // THIS IS RE-ASSIGNING ?
+}
+
+myValue(a);
+console.log(a);
+
+```
+
+- No JS random method!?
+
+- The creation phase and the execution phase ?
+- Avoid `var` and just use `let` and `const`
+
+- why does this work ? 
+```
+
+var a = 'Xyzzy';
+
+var a = 'hello';
+
+console.log(a);
+
+```
