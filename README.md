@@ -7,7 +7,6 @@
 - 4	Arrays
 - 5	Objects
 - 6	Writing Better Code
-- JS book
 
 |  | 1st: John the Baptist | 2nd: deep-dive | 3rd: find/fill gaps |
 | :--- | :---: | :---: | :---: | 
@@ -15,3 +14,5 @@
 | L2 |
 | L3 | 
 | L4 |
+| L5 |
+| L6 |
