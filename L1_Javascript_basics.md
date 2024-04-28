@@ -1,18 +1,18 @@
-# JavaScript Basics
+# [JavaScript Basics](https://launchschool.com/lessons/7377ece4/assignments)
 
-## About This Course
-## JavaScript Versions
-## Resources
-## Running your Code
-## Code Style
-## Data Types
+## [1. About This Course](https://launchschool.com/lessons/7377ece4/assignments/ddcdcfdb)
+## [2. JavaScript Versions](https://launchschool.com/lessons/7377ece4/assignments/0e4c3df9)
+## [3. Resources](https://launchschool.com/lessons/7377ece4/assignments/c3c0c9c6)
+## [4.Running your Code](https://launchschool.com/lessons/7377ece4/assignments/cc16ec53)
+## [5. Code Style](https://launchschool.com/lessons/7377ece4/assignments/88ed1c52)
+## [6. Data Types](https://launchschool.com/lessons/7377ece4/assignments/bd02b66c)
 
 ### Number
 ### Boolean
 ### String
 ### Capitalization
 
-## More on Strings
+## [7. More on Strings](https://launchschool.com/lessons/7377ece4/assignments/84419ace)
 
 ### Special Characters
 ### String Concatenaton
@@ -21,9 +21,9 @@
 ### Working with Long Strings
 ### JavaScript's Built-in String Methods
 
-## Primitive Values are Immutable
+## [8. Primitive Values are Immutable](https://launchschool.com/lessons/7377ece4/assignments/74cfbc2a)
 
-## Variables
+## [9. Variableshttps://launchschool.com/lessons/7377ece4/assignments/4a43f341)
 
 ### Naming Variables
 
@@ -33,7 +33,7 @@
 
 ### Dynamic Typing
 
-## Operators
+## [10. Operators](https://launchschool.com/lessons/7377ece4/assignments/8cdc0e98)
 
 ### Arithmetic Operators
 
@@ -60,7 +60,7 @@
 ### Statements
 
 
-## Input and Output
+## [12. Input and Output](https://launchschool.com/lessons/7377ece4/assignments/4ef1c2e1)
 
 ### Using prompt() to Ger User's Input
 
@@ -76,7 +76,7 @@ alert()
 
 ### Logging Debugging Messages to the JavaScript Console
 
-## Practice Problems - Variables and Numbers
+## [13. Practice Problems - Variables and Numbers](https://launchschool.com/lessons/7377ece4/assignments/bca48745)
 
 1.
 
@@ -143,7 +143,7 @@ alert()
 
 
 
-## [Explicit Primitive Type Coercions](https://launchschool.com/lessons/7377ece4/assignments/3899592c)
+## [14. Explicit Primitive Type Coercions](https://launchschool.com/lessons/7377ece4/assignments/3899592c)
 
 ### Converting Strings to  Numbers
 
@@ -177,7 +177,7 @@ Boolean('true');         // including the string 'true'
 Boolean('false');        // but also including the string 'false'!
 ```
 
-## [Implicit Primitive Type Coercions](https://launchschool.com/lessons/7377ece4/assignments/3d2e392a)
+## [15. Implicit Primitive Type Coercions](https://launchschool.com/lessons/7377ece4/assignments/3d2e392a)
 
 ### The Plus (+) Operator
 
@@ -203,7 +203,7 @@ Boolean('false');        // but also including the string 'false'!
 ### Best Practices
 
 
-## [Practice Problems: Primitive Types and Type Coercion](https://launchschool.com/lessons/7377ece4/assignments/cec504dc)
+## [16. Practice Problems: Primitive Types and Type Coercion](https://launchschool.com/lessons/7377ece4/assignments/cec504dc)
 
 1.
 
@@ -238,7 +238,7 @@ Boolean('false');        // but also including the string 'false'!
 ```
 
 
-## Conditionals
+## [17. Conditionals](https://launchschool.com/lessons/7377ece4/assignments/5f7c3a20)
 
 ### if...switch
 
@@ -248,7 +248,7 @@ Boolean('false');        // but also including the string 'false'!
 
 ### Comparing Values with NaN
 
-## Practice Problems: Operators and Conditionals
+## [18. Practice Problems: Operators and Conditionals](https://launchschool.com/lessons/7377ece4/assignments/e8b72278)
 
 1.
 
@@ -313,7 +313,7 @@ Boolean('false');        // but also including the string 'false'!
 
 ```
 
-## [Looping and Iteration](https://launchschool.com/lessons/7377ece4/assignments/a261b334)
+## [19. Looping and Iteration](https://launchschool.com/lessons/7377ece4/assignments/a261b334)
 
 ### The "while" loop
 
@@ -325,7 +325,7 @@ Boolean('false');        // but also including the string 'false'!
 
 ### The "for" loop
 
-## Exercises
+## [20. Exercises](https://launchschool.com/lessons/7377ece4/assignments/693cc885)
 
 - First 6 of [JS basics](https://launchschool.com/exercise_sets/c39a2eed)
 - 
