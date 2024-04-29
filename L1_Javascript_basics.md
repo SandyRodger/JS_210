@@ -336,7 +336,7 @@ FOO = 4; // Uncaught TypeError: Assignment to constant variable.
 
 ### Dynamic Typing
 
-- JS is a dynamically typed language, which means that a variable may refer to a value of any data tyoe and can be reassigned to a different type wihtout throwing an exception.
+- JS is a dynamically typed language, which means that a variable may refer to a value of any data type and can be reassigned to a different type wihtout throwing an exception.
 
 ## [10. Operators](https://launchschool.com/lessons/7377ece4/assignments/8cdc0e98)
 
@@ -1203,6 +1203,21 @@ console.log(myName, saveName); // Bob, Bob
 
 6. Counting the Number of Chars
 
+```
+const readlineSync = require("readline-sync");
+
+console.log("Please enter a phrase:");
+let input1 = readlineSync.prompt();
+console.log(`There are ${input1.length} characters in "${input1}"`)
+
+// LS solution:
+ 
+const input = prompt('Please enter a phrase:'); // this doesn't work ... why?
+const numberOfCharacters = String(input.length);
+
+console.log(`There are ${numberOfCharacters} characters in '${input}'.`);
+```
+
 ## [Quiz](https://launchschool.com/lessons/7377ece4/assignments/fd281ca8)
 
-
+10/12 (83%)
