@@ -1,0 +1,2 @@
+let quote = '"It\'s hard to fail, but it is worse never to have tried to succeed." - Theodore Roosevelt';
+let quote2 = "\"It's hard to fail, but it is worse never to have tried to succeed.\" - Theodore Roosevelt";

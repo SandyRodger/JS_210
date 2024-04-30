@@ -1,0 +1,15 @@
+{
+  "name": "js_210",
+  "version": "1.0.0",
+  "description": "- [JS book](https://github.com/SandyRodger/launch_school_books/blob/main/javascript.md) - [1 JavaScript Basics](https://launchschool.com/lessons/7377ece4) - 2 Functions and Variable Scope - 3\tPractice Problems: Logic and Flow Contro - 4\tArrays - 5\tObjects - 6\tWriting Better Code - JS book",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}

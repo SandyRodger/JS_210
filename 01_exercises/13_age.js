@@ -1,0 +1,10 @@
+let readlineSync = require('readline-sync');
+let age = Number(readlineSync.question('What is your age? '));
+console.log(`You are ${age} years old.`);
+console.log(`In 10 years you will be ${age + 10} years old.`);
+console.log(`In 20 years you will be ${age + 20} years old.`);
+console.log(`In 30 years you will be ${age + 30} years old.`);
+console.log(`In 40 years you will be ${age + 40} years old.`);
+console.log(`In 50 years you will be ${age + 50} years old.`);
+console.log(`In 60 years you will be ${age + 60} years old.`);
+console.log(`In 70 years you will be ${age + 70} years old.`);
