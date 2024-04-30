@@ -1473,45 +1473,125 @@ capitalize(names);
 console.log(names); // => ['Chris', 'Kevin', 'Naveed']
 ```
 
-- 
+- Or:
 
-#### WHat Javascript does
+```
+function capitalize(names) {
+  return names.map(name => name[0].toUpperCase() + name.slice(1));
+}
+
+let names = ["chris", "kevin", "naveed"];
+capitalize(names); // returns ['Chris', 'Kevin', 'Naveed']
+console.log(names); // => ['chris', 'kevin', 'naveed']
+```
+
+#### What Javascript does
+
+- If the input is primitive its pass by value, if its compound, its pass by reference (depending on what operators you use)
+
 #### Return Values
+
+- We can talk about return values being pass-by-reference/value in the same way as arguments. 
+
 #### Assignment
+
+- It is incorrect to talk about assignment as either one, but in reality they do mimick these laws, so it can be a helpful mental model.
+
 #### Exercises
 
 1.
+
+```
+function changeMyWord(word) {
+  console.log(word); // Hello
+  word = word.toUpperCase();
+}
+
+let myWord = 'Hello';
+changeMyWord(myWord);
+console.log(myWord); // Hello
+```
+
 2.
+
+```
+function changeMyWord(word) {
+  console.log(word); // Hello
+  word = word.toUpperCase();
+  return word;
+}
+
+let myWord = 'Hello';
+myWord = changeMyWord(myWord);
+console.log(myWord); // HELLO
+```
+
 3.
+
+```
+function changeMyWord(word) {
+  console.log(word); // Hello
+  word = word.toUpperCase();
+  return word;
+}
+
+let myWord = 'Hello';
+let myOtherWord = changeMyWord(myWord);
+console.log(myWord); // Hello
+console.log(myOtherWord); // HELLO
+```
+
 4.
+
+```
+function changeMyWords(words) {
+  console.log(words); // ['Hello', 'Goodbye']
+  words[0] = 'Hi';
+}
+
+let myWords = ['Hello', 'Goodbye'];
+changeMyWords(myWords);
+console.log(myWords); // ['Hi', 'Goodbye']
+```
+
 5.
 
+```
+function changeMyWords(words) {
+  console.log(words); // ['Hello', 'Goodbye']
+  words = ['Hi', 'Goodbye'];
+}
+
+let myWords = ['Hello', 'Goodbye'];
+changeMyWords(myWords);
+console.log(myWords); // ['Hello', 'Goodbye']
+```
 
 ## [14	Variables, Functions, and Blocks: Revisited](https://launchschool.com/lessons/7cd4abf4/assignments/8ac6ad6d)
 
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
+- Alles klar
 
 ## [15	Exercises: Variables, Functions, and Blocks](https://launchschool.com/lessons/7cd4abf4/assignments/01c3e47c)
 
-1.
-2.
-3.
-4.
-5.
-6.
-7.
+- Alles Roger : all correct, too easy.
 
 ## [16	Closures](https://launchschool.com/lessons/7cd4abf4/assignments/0ea7c745)
 
+- Allows us to access variables in scope at the variables definition, even if they are no longer in scope.
+
 ### What to Focus on
+
+- Mastery
+- They are conceptually simple, but in practice they can catch one out easily. (Especially if one thinks of them as a runtime feature (??))
+- (Technically they are a mixture of lexical and runtime features.)
+- They are an artifact of the code's structure, not how the code runs.
+- Focus on:
+  - What is a closure
+  - What is in a closure
+  - When is a closure created
+  - What is the relationship between closures and scope
+  - What do we mean when we say that closures are defined lexically
+  - What is partial function application
 
 ### Closures
 
