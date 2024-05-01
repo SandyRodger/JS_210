@@ -1582,9 +1582,10 @@ console.log(myWords); // ['Hello', 'Goodbye']
 ### What to Focus on
 
 - Mastery
-- They are conceptually simple, but in practice they can catch one out easily. (Especially if one thinks of them as a runtime feature (??))
+- An invisible fence that lets a function access a variable that was in scope at the object's definition. A bit like Harry Potter seeing his parents in the mirror of Erised even though they aren't alive any more.
+- They are conceptually simple, but in practice they can catch one out easily. ("Especially if one thinks of them as a runtime feature" (??))
 - (Technically they are a mixture of lexical and runtime features.)
-- They are an artifact of the code's structure, not how the code runs.
+- They are an artifact of the code's structure, not how the code runs. (This sentence is unhelpfully vague, but I suppose it will become clear).
 - Focus on:
   - What is a closure
   - What is in a closure
@@ -1595,20 +1596,369 @@ console.log(myWords); // ['Hello', 'Goodbye']
 
 ### Closures
 
+- Closures and scope : "Intimately related" (identical?) : Clusures use the scope in effect at a function's definition to determine what variables that function can access.
+- Circular reasoning (Is it?!?!?!?! I don't think so):
+
+  - Closures use the scope in effect at a function's definition to determine what variables that function can access.
+                                   &&
+  - What variables are in scope during a function's execution depend on the closure formed by the function's definiton
+- "The combination of a function and and the lexical environment within which it was defined" - MDN (more or less)
+- Closures are created when you define a function or method.
+- "In effect the function definition and its scope become a single entity called a closure". (Super nebulous, guys, not helpful).
+- **Even if the variables, that are cuaght in the closure, are not in scope at the function's invocation, they can be accessed in the closure**
+- Remember that the closure only saves the variables that the function asks for ("needs"). If the function argument is `foo`, it will save `foo`, but not `bar` in the next line.
+- "Where you invoke a function is unimportant: where you define a function is"
+
 #### A helpful mental model
+
+- LS: When you define a function, JS finds all the variable names it needs within that lexical scope. Then it takes those and puts them in an envelope object which it attaches to the function object. But actually in the envelope isn't the objects themselves, but pointers to the variables (NOT EVEN POINTERS TO THE OBJECTS).
+- When you go to the supermarket with a shopping list and buy all the items that are on your list (if the supermarket has them), then, when you get home you put the items in your pantry and stick the list to your fridge. This list is a list of boxes ("Malteasers", "raisins" etc), within which you can find the snacks - possibly because you don't want your illiterate infant child seeing them.
+- Javascript won't let you assign a variable to a variable , but internally it does do this here. The reason it needs a pointer, rather than the object, is it is important for it to be able to see any changes that may have been made to what the var contains.
+
+```
+let numbers = [1, 2, 3];
+
+function printNumbers() {
+  console.log(numbers);
+}
+
+printNumbers(); // => [ 1, 2, 3 ]
+
+numbers = [4, 5];
+printNumbers(); // => [ 4, 5 ]
+```
+
+- When executing a function, and encountering a var the order of look-up is
+  - first: local scope
+  - second: closure
+
+- Here is a sentence I will need to come back to:
+  - "All that stuff about looking at outer scopes until you reach the global scope all happens during the creation phase when JavaScript is looking for identifiers (e.g., variable and function names) and determining what scope they belong to."
+
+- Vars that are in scope when a function is invoked, but are not in the closure cannot be found.
+- [cartoon by Karis](https://karistobias.medium.com/javascript-closures-a-mental-model-66b7a9f02781)
 
 #### Examples of closure
 
+- "First-class value/object" is a term used across languages to refer to values meeting these conditions:
+  - Can be assigned to things.
+  - Can be an argument to a function.
+  - Can be returned from a function.
+- Functions are first-class objects, big whoop. Apparently, this allows for a more declarative and expressive style of programming.
+- So we can execute functions in a totally different part of the program to where they were defined:
+
+```
+function foo() {
+  let name = "Pete";
+  return function() {
+    console.log(name);
+  };
+}
+
+let printPete = foo();
+printPete(); // Pete
+```
+
+- "garbage collected" - local vars that are unsaved after a function's invocation, I guess.
+- "Functions that return functions are perhaps the most powerful feature of JS".
+
+- The following example looks like a demonstration of variable scope, but technically it is by using a closure, that `counter` is able to be incremented.
+
+```
+let counter = 0;
+
+function incrementCounter() {
+  counter += 1;
+}
+
+incrementCounter();
+incrementCounter();
+console.log(counter); // 2
+```
+
+- A closure sees the most up-to-date version of the variables it has saved.
+- Returning a function can leave the variables declared inside the function inaccessible AKA private. This is a form of data-protection that makes JS very useful.  
+- Here is an example of two functions sharing the same variable:
+
+```
+function makeCounter() {
+  let counter = 0;
+
+  const fun1 = function() {
+    counter += 1;
+    return counter;
+  }
+
+  const fun2 = function() {
+    counter += 2;
+    return counter;
+  }
+
+  return [fun1, fun2];
+}
+
+let funs = makeCounter();
+let fun1 = funs[0];
+let fun2 = funs[1];
+console.log(fun1()); // 1
+console.log(fun2()); // 3
+```
+
+- It's a little weird to say, but `forEach` in the following example is also using a closure. Because the callback function that you pass to it still has access to `oddNumbers`.
+
+```
+let oddNumbers = [];
+array.forEach(number => {
+  if (number % 2 === 1) {
+    oddNumbers.push(number);
+  }
+});
+```
+
+- The thing to remember is that despite appearances, closures are defined lexically (depending on your program's stucture) and not by what happens at execution.
+  - Said differently: the closure is defined at definition. By the time of execution it's old news.
+
 ### Partial Function Application
+
+- Because the following example provides the first argument in `makeAdder` and the second argument comes in a later function invocation, it's called 'Partial Function Application'.
+
+```
+function add(first, second) {
+  return first + second;
+}
+
+function makeAdder(firstNumber) {
+  return function(secondNumber) {
+    return add(firstNumber, secondNumber);
+  };
+}
+
+let addFive = makeAdder(5);
+let addTen = makeAdder(10);
+
+console.log(addFive(3));  // 8
+console.log(addFive(55)); // 60
+console.log(addTen(3));   // 13
+console.log(addTen(55));  // 65
+```
+
+- "The creation of a function that can call a second function with fewer arguments than the second function expects"
+- Useful when you want a function that won't call a passed-in function without enough arguments. It lets you create a function that fills the gaps by supplying missing elements.
+- For instance, in a function taht downloads files the download may fail, in which case a call-back function must be available:
+
+```
+function download(locationOfFile, errorHandler) {
+  // try to download the file
+  if (gotError) {
+    errorHandler(reasonCode);
+  }
+}
+
+function errorDetected(url, reason) {
+  // handle the error
+}
+
+download("https://example.com/foo.txt", /* ??? */);
+```
+
+- PFA can get around the limitations of single-argument functions you come across:
+
+```
+function makeErrorHandlerFor(locationOfFile) {
+  return function(reason) {
+    errorDetected(locationOfFile, reason);
+  };
+}
+
+let url = "https://example.com/foo.txt";
+download(url, makeErrorHandlerFor(url));
+```
+
+- When you need to use this function in many places it can be helpful.
+
+- Or just use `bind` to pefom partial function application (I don't understand this, must go over it later):
+
+```
+let url = "https://example.com/foo.txt";
+download(url, errorDetected.bind(null, url));
+```
 
 #### Recognizing Partial Function Application
 
+- Look for a reduction in the number of arguments that need to be passed in. That discounts the following function:
+
+```
+function makeLogger(identifier) {
+  return function(msg) {
+    console.log(identifier + ' ' + msg);
+  };
+}
+```
+
+- but this is PFA:
+
+```
+function makeLogger(identifier) {
+  return function(msg) {
+    console.log(identifier, msg);
+  };
+}
+```
+
 ### What are closures good for?
+
+- We've covered:
+  - callbacks
+  - PFAs
+  - private data
+- Other uses are:
+  - Currying (a special type of PFA)
+  - Emulating private methods
+  - creating functions that can only be used once (!)
+  - Memoization (avoiding repetitive, expensive operations)
+  - Iterators and Generators
+  - The module pattern (putting code/data into modules)
+  - Asynchronous operations.
+
 
 ### Summary
 
+- Closures and scope intertwine like the dickens, but they're distinct concepts. You need to grok both.
+
 ## [17	More Exercises](https://launchschool.com/lessons/7cd4abf4/assignments/7ca19c4e)
 
-- complete [these](https://launchschool.com/exercise_sets/4f20da02)
+1.
+
+```
+var myVar = 'This is global';
+
+function someFunction() {
+  var myVar = 'This is local';
+}
+
+someFunction();
+console.log(myVar);
+```
+
+2.
+
+```
+var myVar = 'This is global';
+
+function someFunction() {
+  var myVar = 'This is local';
+  console.log(myVar); // This is local
+}
+
+someFunction();
+```
+
+3.
+
+```
+var myVar = 'This is global';
+
+function someFunction() {
+  myVar = 'This is local';
+}
+
+someFunction();
+console.log(myVar); // This is local
+```
+
+4.
+
+```
+var myVar = 'This is global';
+
+function someFunction() {
+  console.log(myVar);
+}
+
+someFunction(); // This is global
+```
+
+5.
+
+```
+function someFunction() {
+  myVar = 'This is global';
+}
+
+someFunction();
+console.log(myVar); // This is global
+```
+
+6.
+
+```
+let a = 7;
+
+function myValue(b) {
+  b += 10;
+}
+
+myValue(a);
+console.log(a); // 7
+```
+
+7.
+
+```
+let a = 7;
+
+function myValue(a) {
+  a += 10;
+}
+
+myValue(a);
+console.log(a); // 7
+```
+
+8.
+
+```
+let a = [1, 2, 3];
+
+function myValue(b) {
+  b[2] += 7;
+}
+
+myValue(a);
+console.log(a); // [1, 2, 10]
+```
+
+10.
+
+```
+// logValue(); // Hello, world!
+
+// function logValue() {
+//   console.log('Hello, world!');
+// }
+
+var logValue = 'foo';
+
+function logValue() {
+  console.log('Hello, world!');
+}
+
+console.log(typeof logValue); // string
+```
+
 
 ## [Quiz](https://launchschool.com/lessons/7cd4abf4/assignments/d368f571)
+
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+
+6/11 (55%)
