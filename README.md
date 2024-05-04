@@ -4,7 +4,7 @@
 - [1 JavaScript Basics](https://github.com/SandyRodger/JS_210/blob/main/L1_Javascript_basics.md)
 - [2 Functions and Variable Scope](https://github.com/SandyRodger/JS_210/blob/main/L2_functions_and_variable_scope.md)
 - [3	Practice Problems: Logic and Flow Control](https://github.com/SandyRodger/JS_210/blob/main/L3_practice_problems_logic_and_flow.md)
-- 4	Arrays
+- [4	Arrays](https://github.com/SandyRodger/JS_210/blob/main/L4_arrays.md)
 - 5	Objects
 - 6	Writing Better Code
 
