@@ -647,11 +647,11 @@ function getName() {
 - So the code is effectively rearranged to the following:
 
 ```
-console.log(getName());
-
 function getName() {
   return "Pete";
 }
+
+console.log(getName());
 ```
 
 - Hoisting does not change the program. It merely executes it as though it were different. Like eating desert before your main course (?)
