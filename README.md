@@ -1,7 +1,7 @@
 # JS_210
 
-- [JS book](https://github.com/SandyRodger/launch_school_books/blob/main/javascript.md)
-- [JavaScript Basics](https://github.com/SandyRodger/JS_210/blob/main/L1_Javascript_basics.md)
+## [JS book](https://github.com/SandyRodger/launch_school_books/blob/main/javascript.md)
+## [JavaScript Basics](https://github.com/SandyRodger/JS_210/blob/main/L1_Javascript_basics.md)
   - [1. About This Course](https://github.com/SandyRodger/JS_210/blob/main/L1_Javascript_basics.md#1-about-this-course)
   - [2. JavaScript Versions](https://github.com/SandyRodger/JS_210/blob/main/L1_Javascript_basics.md#2-javascript-versions)
   - [3. Resources](https://github.com/SandyRodger/JS_210/blob/main/L1_Javascript_basics.md#3-resources)
@@ -76,7 +76,7 @@
   - [20. Exercises](https://github.com/SandyRodger/JS_210/blob/main/L1_Javascript_basics.md#20-exercises)
   - [Quiz](https://github.com/SandyRodger/JS_210/blob/main/L1_Javascript_basics.md#quiz)
 
-- [Functions and Variable Scope](https://github.com/SandyRodger/JS_210/blob/main/L2_functions_and_variable_scope.md#functions-and-variable-scope)
+## [Functions and Variable Scope](https://github.com/SandyRodger/JS_210/blob/main/L2_functions_and_variable_scope.md#functions-and-variable-scope)
 - [1 Defining Functions](https://github.com/SandyRodger/JS_210/blob/main/L2_functions_and_variable_scope.md#1-defining-functions)
   - [Parameters v arguments](https://github.com/SandyRodger/JS_210/blob/main/L2_functions_and_variable_scope.md#parameters-v-arguments)
 - [2 Function Invocations and Arguments](https://github.com/SandyRodger/JS_210/blob/main/L2_functions_and_variable_scope.md#2-function-invocations-and-arguments)
@@ -146,7 +146,7 @@
 - [Quiz](https://github.com/SandyRodger/JS_210/blob/main/L2_functions_and_variable_scope.md#quiz)
 
  
-- [Practice Problems: Logic and Flow](https://github.com/SandyRodger/JS_210/blob/main/L3_practice_problems_logic_and_flow.md#practice-problems-logic-and-flow)
+## [Practice Problems: Logic and Flow](https://github.com/SandyRodger/JS_210/blob/main/L3_practice_problems_logic_and_flow.md#practice-problems-logic-and-flow)
 - [1 Chrome Developer Tools](https://github.com/SandyRodger/JS_210/blob/main/L3_practice_problems_logic_and_flow.md#1-chrome-developer-tools)
   - [Video](https://github.com/SandyRodger/JS_210/blob/main/L3_practice_problems_logic_and_flow.md#video)
   - [Further Reading](https://github.com/SandyRodger/JS_210/blob/main/L3_practice_problems_logic_and_flow.md#further-reading)
@@ -184,7 +184,7 @@
 - [23 Reference Solution: Rot13 Cipher](https://github.com/SandyRodger/JS_210/blob/main/L3_practice_problems_logic_and_flow.md#23-reference-solution-rot13-cipher)
 - [24 More Exercises](https://github.com/SandyRodger/JS_210/blob/main/L3_practice_problems_logic_and_flow.md#24-more-exercises)
 
-- [Arrays](https://github.com/SandyRodger/JS_210/blob/main/L4_arrays.md#arrays)
+## [Arrays](https://github.com/SandyRodger/JS_210/blob/main/L4_arrays.md#arrays)
 - [1 Arrays](https://github.com/SandyRodger/JS_210/blob/main/L4_arrays.md#1-arrays)
   - [Iterating Through an Array](https://github.com/SandyRodger/JS_210/blob/main/L4_arrays.md#iterating-through-an-array)
   - [Accessing, Modifying, and Detecting Values](https://github.com/SandyRodger/JS_210/blob/main/L4_arrays.md#accessing-modifying-and-detecting-values)
@@ -204,7 +204,7 @@
 - [12 More Exercises](https://github.com/SandyRodger/JS_210/blob/main/L4_arrays.md#12-more-exercises)
 - [13 Quiz](https://github.com/SandyRodger/JS_210/blob/main/L4_arrays.md#13-quiz)
 
-- [Objects](https://github.com/SandyRodger/JS_210/blob/main/L5_Objects.md#objects)
+## [Objects](https://github.com/SandyRodger/JS_210/blob/main/L5_Objects.md#objects)
 - [1 Introduction to Objects](https://github.com/SandyRodger/JS_210/blob/main/L5_Objects.md#1-introduction-to-objects)
   - [Standard Built-in Objects](https://github.com/SandyRodger/JS_210/blob/main/L5_Objects.md#standard-built-in-objects)
   - [Creating Custom Objects](https://github.com/SandyRodger/JS_210/blob/main/L5_Objects.md#creating-custom-objects)
@@ -251,7 +251,7 @@
 - [13 Practice Problem: Repeated Characters](https://github.com/SandyRodger/JS_210/blob/main/L5_Objects.md#13-practice-problem-repeated-characters)
 - [14 More Exercises](https://github.com/SandyRodger
 
-- [Writing better code](https://github.com/SandyRodger/JS_210/blob/main/L6_writing_better_code.md#writing-better-code)
+## [Writing better code](https://github.com/SandyRodger/JS_210/blob/main/L6_writing_better_code.md#writing-better-code)
 - [1 Douglas Crockford Lecture: The JavaScript Programming Language](https://github.com/SandyRodger/JS_210/blob/main/L6_writing_better_code.md#1-douglas-crockford-lecture-the-javascript-programming-language)
 - [2 Douglas Crockford Lecture: JavaScript the Good Parts](https://github.com/SandyRodger/JS_210/blob/main/L6_writing_better_code.md#2-douglas-crockford-lecture-javascript-the-good-parts)
 - [3 JavaScript Style Guide](https://github.com/SandyRodger/JS_210/blob/main/L6_writing_better_code.md#3-javascript-style-guide)
@@ -294,7 +294,7 @@
 - [10 Exercises: JavaScript Language Fundamentals](https://github.com/SandyRodger/JS_210/blob/main/L6_writing_better_code.md#10-exercises-javascript-language-fundamentals)
 - [11 Course Feedback](https://github.com/SandyRodger/JS_210/blob/main/L6_writing_better_code.md#11-course-feedback)
 
-- [Assessment - study guide](https://launchschool.com/lessons/56ad2094/assignments/2ec8fa4d)
+## [Assessment - study guide](https://launchschool.com/lessons/56ad2094/assignments/2ec8fa4d)
 
 
 |  | 1st: John the Baptist | 2nd: deep-dive | 3rd: find/fill gaps |
