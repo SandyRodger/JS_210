@@ -294,7 +294,7 @@
 - [10 Exercises: JavaScript Language Fundamentals](https://github.com/SandyRodger/JS_210/blob/main/L6_writing_better_code.md#10-exercises-javascript-language-fundamentals)
 - [11 Course Feedback](https://github.com/SandyRodger/JS_210/blob/main/L6_writing_better_code.md#11-course-feedback)
 
-## [Assessment prep]([https://launchschool.com/lessons/56ad2094/assignments/2ec8fa4d](https://github.com/SandyRodger/JS_210/blob/main/ass_prep.md))
+## [Assessment prep](https://github.com/SandyRodger/JS_210/blob/main/ass_prep.md)
 
 
 |  | 1st: John the Baptist | 2nd: deep-dive | 3rd: find/fill gaps |
