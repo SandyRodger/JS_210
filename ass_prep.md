@@ -15,37 +15,44 @@
 
 You should be able to clearly explain the following topics:
 
-assignments and comparison
-variable scope, especially how variables interact with function definitions and blocks
-function scope
-hoisting
-primitive values, types and type conversions/coercions
-object properties and mutation
-understand the differences between loose and strict equality
-how passing an argument into a function may or may not permanently change the value that a variable contains or points to
-working with Strings, Arrays, and Objects. In particular, you should be thoroughly familiar with the basic Array iteration methods (forEach, map, filter, and find) and how to use Object methods to access the keys and values in an Object as an Array.
-understand that arrays are objects, and be able to determine whether you have an Array
-variables as pointers
-console.log vs return
-truthiness: false and true vs. falsy and truthy
-function definition and function invocation
-function declarations, function expressions, and arrow functions
-implicit return value of function invocations
-first-class functions
-partial function application
-side effects
-naming conventions (legal vs idiomatic)
-pure functions and side effects
-strict mode vs. sloppy mode
-JavaScript syntactic sugar
+## assignments and comparison
+
+- In JS assignment is achieved with the `=` operator.
+
+## variable scope, especially how variables interact with function definitions and blocks
+## function scope
+## hoisting
+## primitive values, types and type conversions/coercions
+## object properties and mutation
+## understand the differences between loose and strict equality
+## how passing an argument into a function may or may not permanently change the value that a variable contains or points to
+## working with Strings, Arrays, and Objects. In particular, you should be thoroughly familiar with the basic Array iteration methods (forEach, map, filter, and find) and how to use Object methods to access the keys and values in an Object as an Array.
+## understand that arrays are objects, and be able to determine whether you have an Array
+## variables as pointers
+## console.log vs return
+## truthiness: false and true vs. falsy and truthy
+## function definition and function invocation
+## function declarations, function expressions, and arrow functions
+## implicit return value of function invocations
+## first-class functions
+## partial function application
+## side effects
+## naming conventions (legal vs idiomatic)
+## pure functions and side effects
+## strict mode vs. sloppy mode
+## JavaScript syntactic sugar
 
 ## To do before assessment:
 
-- Have written answers for all "specific topics of interest".
-- Go through JS210 for a third time looking for gaps?
-- Find more problems to solve (Mattic?)
-- Attend at least 1 SPOT session.
-- Look at Discussion pages for all 6 lessons.
+|  | complete | 2nd | 3rd |
+| :--- | :---: | :---: | :---: | 
+| Have written answers for all "specific topics of interest" |
+| Go through JS210 for a third time looking for gaps |
+| Find more problems to solve (Mattic?) / mock tests |
+| Attend at least 1 SPOT session|
+| sift through Discussion pages for all 6 lessons.|
+| Re-do all the quizes twice. |
+
 
 #### Slack joke post:
 
@@ -55,7 +62,7 @@ I'm finding that some of the code I'm encountering has a strong tendency to beco
 function myFunc()
 ```
 
-I immediately hear:
+I immediately want to stand on my desk as say:
 
 ![Screenshot 2024-05-24 at 10 08 04](https://github.com/SandyRodger/JS_210/assets/78854926/7ccbbc8f-7490-4491-bb16-f0a633da36bc)
 
