@@ -295,13 +295,3 @@
 - [11 Course Feedback](https://github.com/SandyRodger/JS_210/blob/main/L6_writing_better_code.md#11-course-feedback)
 
 ## [Assessment prep](https://github.com/SandyRodger/JS_210/blob/main/ass_prep.md)
-
-
-|  | 1st: John the Baptist | 2nd: deep-dive | 3rd: find/fill gaps |
-| :--- | :---: | :---: | :---: | 
-| L1 | 25.4.24 | 29.4.24 |
-| L2 | 29.4.24 | 1.5.24 |
-| L3 | 1.5.24 | 4.5.24 |
-| L4 | 4.5.24 |
-| L5 ||21.5.24|
-| L6 |21.5.24| 23.5.24 |
