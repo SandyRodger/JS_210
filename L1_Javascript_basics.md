@@ -325,7 +325,11 @@ let anotherVariable = true;
 const FOO = 42;
 ```
 
-- It looks like assignment, but it isn't.
+- Initializers look like assignment, but arent.
+  - This is declaration: `let myVariable`
+  - This is assignement: `myVariable = 1`
+  - This is an initializer: `let someVariable = 42` , ie the combination of variable declaration + `=` + the expression the right of `=`.
+
 - Once a `const` is declared, you cannot assign a new value to it. That means, unlike a var, it must be initialized and declared at the same time:
 
 ```
