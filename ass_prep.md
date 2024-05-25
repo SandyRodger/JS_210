@@ -13,13 +13,39 @@
 
 ### specific topics of interest:
 
+- "some of the bullet points are super broad" - Mattic.
+
 You should be able to clearly explain the following topics:
 
 ## assignments and comparison
 
-- In JS assignment is achieved with the `=` operator.
+- In JS assignment is achieved with the `=` operator. This is disctinct from declaring a variable using the `let`, `const` and `var` keywords, with which it is often combined.
+- Comparison in JS is accomplished with the `==` (non-strict equality) and `===` (strict equality) operators.
+  - `===` only returns true if both operands are the same value and type. ie ` 1 === '1'`
+  - `==` will return true if the operands are of different types, but the same values. ie ` 1 == '1'`
+  - When comparing compound objects the equality oprators evaluate whether the two oprands ar ethe same object, regardless of their content.
+  - In order to compare the objects contained within, one would have to write one's own comparison function iterating through the values referenced within. ie:
+
+```
+function arraysEqual(left, right) {
+  if (left.length !== right.length) {
+    return false;
+  }
+
+  for (let index = 0; index < left.length; index += 1) {
+    if (left[index] !== right[index]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+```
+
+- When an array is compared with a non-array using `==`, the array is first implicitly converted into a string, then if the objects are still of different types more implicit conversions take place.
 
 ## variable scope, especially how variables interact with function definitions and blocks
+
 ## function scope
 ## hoisting
 ## primitive values, types and type conversions/coercions
@@ -36,9 +62,10 @@ You should be able to clearly explain the following topics:
 ## implicit return value of function invocations
 ## first-class functions
 ## partial function application
+## AND closures (says Mattic)
 ## side effects
 ## naming conventions (legal vs idiomatic)
-## pure functions and side effects
+## pure functions and side effects (overlap with above ?)
 ## strict mode vs. sloppy mode
 ## JavaScript syntactic sugar
 
@@ -53,6 +80,18 @@ You should be able to clearly explain the following topics:
 | sift through Discussion pages for all 6 lessons.|
 | Re-do all the quizes twice. |
 
+## Mattic advice:
+
+- Build your own study guide in your own words
+- Practice terminology (phase 2)
+- (Phase 3) Go through official solutions and make sure it's fresh in your memory, ESPECIALLY TEST-CASES. "Something a bit funky from the exercises". Then paste in the concept from your list of concepts.
+- There will be trick-questions, testing for edge functinality.
+- synthesis / describe in your own words - very important.
+
+### on forgetting early courses
+
+- front end it's not a problem.
+- For back-end... conceptually, things are still here.
 
 #### Slack joke post:
 
