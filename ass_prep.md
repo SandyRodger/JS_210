@@ -9,7 +9,7 @@
 | L5 ||21.5.24|
 | L6 |21.5.24| 23.5.24 |
 
-## [study guide](https://launchschool.com/lessons/56ad2094/assignments/2ec8fa4d)
+## [study guide](https://github.com/SandyRodger/JS_210/blob/main/assessment_study_guide.md)
 
 ### specific topics of interest:
 
