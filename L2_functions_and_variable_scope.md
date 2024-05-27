@@ -49,7 +49,7 @@ takeTwo(1); // 1 undefined NaN
 takeTwo(1, 2, 4); // 1 2 3
 ```
 
-## [3	Practice Problems: Functions]()
+## [3	Practice Problems: Functions](https://launchschool.com/lessons/7cd4abf4/assignments/1dbf77a3)
 
 1.
 
@@ -139,7 +139,7 @@ function average(arr) {
 console.log(average(temperatures)); // 50.6
 ```
 
-## [4	Nested Functions]()
+## [4	Nested Functions](https://launchschool.com/lessons/7cd4abf4/assignments/27dc68d7)
 
 ```
 function circumference(radius) {
@@ -151,7 +151,7 @@ function circumference(radius) {
 }
 ```
 
-## [5	Functional Scopes and Lexical Scoping]()
+## [5	Functional Scopes and Lexical Scoping](https://launchschool.com/lessons/7cd4abf4/assignments/0b1349b7)
 
 - A variable's scope is the part of the program that can access that variable by name.
 - Every function or block creates a new variable scope.
@@ -286,7 +286,7 @@ function second () {
 second() // Error: gary is not defined
 ```
 
-## [6	Function Declarations and Function Expressions]()
+## [6	Function Declarations and Function Expressions](https://launchschool.com/lessons/7cd4abf4/assignments/5cb67110)
 
 ### Function Declarations
 
