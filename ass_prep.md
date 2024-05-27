@@ -73,7 +73,7 @@ function arraysEqual(left, right) {
 
 |  | complete | 2nd | 3rd |
 | :--- | :---: | :---: | :---: | 
-| Have written answers for all "specific topics of interest" |
+| "Build your own study guide in your own words" (Have written answers for all "specific topics of interest") |
 | Go through JS210 for a third time looking for gaps |
 | Find more problems to solve (Mattic?) / mock tests |
 | Attend at least 1 SPOT session|
@@ -92,17 +92,4 @@ function arraysEqual(left, right) {
 
 - front end it's not a problem.
 - For back-end... conceptually, things are still here.
-
-#### Slack joke post:
-
-I'm finding that some of the code I'm encountering has a strong tendency to become pop-culture references in my head, and I want to know if I'm not alone. For example every time I see:
-
-```
-function myFunc()
-```
-
-I immediately want to stand on my desk as say:
-
-![Screenshot 2024-05-24 at 10 08 04](https://github.com/SandyRodger/JS_210/assets/78854926/7ccbbc8f-7490-4491-bb16-f0a633da36bc)
-
 
