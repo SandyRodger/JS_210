@@ -1,5 +1,12 @@
 # [study guide](https://launchschool.com/lessons/56ad2094/assignments/2ec8fa4d)
 
+For each heading:
+
+- Links:
+- My summary:
+- Launch School examples:
+- My examples:
+
 ## 1. assignments and comparison
 
 - In JS assignment is achieved with the `=` operator. This is distinct from declaring a variable using the `let`, `const` and `var` keywords, with which it is often combined.
@@ -50,7 +57,89 @@ function arraysEqual(left, right) {
 
 
 ## 3. Function scope
-## 4. hoisting
+
+- Links:
+  - [L2: function scope](https://launchschool.com/lessons/7cd4abf4/assignments/0b1349b7)
+
+- My summary:
+  - functions create their own local scope
+  - The code within a function can access all variables in all surrounding scopes. (Japanese toilets) Even nested.
+  - Variables declared inside a function have function scope and cannot be accessed outside the body of the function.
+- Launch School examples:
+- My examples:
+
+## 4. [hoisting](https://launchschool.com/lessons/7cd4abf4/assignments/510e62bb)
+
+### What is hoisting?
+  - During the creation phase of a program, declarations seem to get lifted up to the top of their scope. 
+  - This is all tied up with the effect of JS engines having a creation phase and an execution phase.
+    - Execution phase is what you think of as regular running of the program line by line.
+    - Before that it does a few things in preparation, such as finds all the variable, function and class declarations.
+
+### `var` vs `let`/`const`
+
+  - When hoisted `var` is assigned to `undefined` but the others are 'not set' and if you try to access them it with raise an exception. This is the "temporal dead zone".
+  - `var` at the top level becomes a property of the global object. This makes `let`/`const` safer. (Unless declared inside a function).
+  - That's because `var` is function scoped, so is visible in the function it was declared.
+  - `let` is block scoped, so only visible within the block where it's created.
+      - Not everything between curly braces is a block, for instance: `let foo = { bar: 42,};` is not a block, it's an object.
+
+```
+function foo() {
+  if (false) {
+    var a = 1;
+  }
+
+  console.log(a); // => undefined   :  here the declaration happened, but the assignment did not because the if statement never evaluated to true.
+}
+
+foo();
+```
+    
+    - Visibility scope is like "actual scope" and declared scope is "yeah - technically, scope"
+    
+### How do functions and classes interact with hoisting? How do they differ?
+  - `let`, `const` and `class` are declared with block scope, while `var` and `function` are declared with function scope. Even if they're not declared in a function or block.
+  - For functions body is hoisted as well.
+  - In nested functions, the inner function gets hoisted to the top of the function.
+  - Don't nest function declarations inside non-function blocks, because the behaviour is non-standard and unpredictable.
+  - Function expressions often involve assigning a function to a declared variable, in which case the variable gets hoisted, but the assignment doesn't.
+  - Function declarations are hoisted about variable delcarations. so:
+
+```
+bar();              // logs undefined
+var foo = 'hello';
+
+function bar() {
+  console.log(foo);
+}
+```
+
+### Best practices:
+
+- Whenever possible, use `let` and `const` instead of `var`.
+- If using `var` declare all at the top of the scope.
+- Declare `let` and `const` as close to their first usage as possible.
+
+### How does hoisting really work? 
+
+- The mental image of hoisting implies that things get moved out of order. This is not the case.
+- Hoisting is merely a useful mental model to explain why programs act as they do. The real cause of this behaviour is the consequence of JS's two phases.
+- In the creation phase JS scans the program for Variables, functions and classes and adds them to the scope. Which scope it is added to depends on where the declaration is (global, function, block).
+- This means at the end of the creation phase JS knows all the identifiers in your prgram and what scope they belong to.
+- When the execution phase begins JS no lo ger cares about declarations. It concerns itself only with initializations and function/class definition.
+
+```
+boo();
+
+function boo() {
+  console.log("Boo!");
+}
+```
+
+- In the code above:
+  - During the creation phase JS encounters one declaration. `boo` in line 3. This is added to the global scope.
+  - During the execution phase, in line 1, the function `boo()` is invoked. JS looks to the global scope because that is the scope in which `boo()` is found. That name is found since it was saved their during the creation phase. 
 ## 5. primitive values, types and type conversions/coercions
 ## 6. object properties and mutation
 ## 7. understand the differences between loose and strict equality
