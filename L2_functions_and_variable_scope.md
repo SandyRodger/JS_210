@@ -1596,16 +1596,16 @@ console.log(myWords); // ['Hello', 'Goodbye']
 
 ### Closures
 
-- Closures and scope : "Intimately related" (identical?) : Clusures use the scope in effect at a function's definition to determine what variables that function can access.
+- Closures and scope : "Intimately related" (identical?) : Closures use the scope in effect at a function's definition to determine what variables the function can access.
 - Circular reasoning (Is it?!?!?!?! I don't think so):
 
   - Closures use the scope in effect at a function's definition to determine what variables that function can access.
                                    &&
-  - What variables are in scope during a function's execution depend on the closure formed by the function's definiton
-- "The combination of a function and and the lexical environment within which it was defined" - MDN (more or less)
+  - Which variables are in scope during a function's execution depends on the closure formed at the function's definiton
+- "The combination of a function and the lexical environment within which it was defined" - MDN (more or less)
 - Closures are created when you define a function or method.
 - "In effect the function definition and its scope become a single entity called a closure". (Super nebulous, guys, not helpful).
-- **Even if the variables, that are cuaght in the closure, are not in scope at the function's invocation, they can be accessed in the closure**
+- **Even if the variables, that are caught in the closure are not in scope at the function's invocation, they can be accessed in the closure**
 - Remember that the closure only saves the variables that the function asks for ("needs"). If the function argument is `foo`, it will save `foo`, but not `bar` in the next line.
 - "Where you invoke a function is unimportant: where you define a function is"
 
@@ -1613,7 +1613,7 @@ console.log(myWords); // ['Hello', 'Goodbye']
 
 - LS: When you define a function, JS finds all the variable names it needs within that lexical scope. Then it takes those and puts them in an envelope object which it attaches to the function object. But actually in the envelope isn't the objects themselves, but pointers to the variables (NOT EVEN POINTERS TO THE OBJECTS).
 - When you go to the supermarket with a shopping list and buy all the items that are on your list (if the supermarket has them), then, when you get home you put the items in your pantry and stick the list to your fridge. This list is a list of boxes ("Malteasers", "raisins" etc), within which you can find the snacks - possibly because you don't want your illiterate infant child seeing them.
-- Javascript won't let you assign a variable to a variable , but internally it does do this here. The reason it needs a pointer, rather than the object, is it is important for it to be able to see any changes that may have been made to what the var contains.
+xJavascript won't let you assign a variable to a variable , but internally it does do this here. The reason it needs a pointer, rather than the object, is it is important for it to be able to see any changes that may have been made to what the var contains.
 
 ```
 let numbers = [1, 2, 3];
