@@ -25,3 +25,7 @@
 ### pure functions and side effects
 ### strict mode vs. sloppy mode
 ### JavaScript syntactic sugar
+
+## Other points:
+
+- Do you have anything resembling a mock-exam?
