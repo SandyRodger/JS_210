@@ -9,7 +9,7 @@ For each heading:
 
 ## 1. assignments and comparison
 
-- In JS assignment is achieved with the `=` operator. This is distinct from declaring a variable using the `let`, `const` and `var` keywords, with which it is often combined.
+- In JS assignment is achieved with the `=` operator. This is distinct from **declaring** a variable using the `let`, `const` and `var` keywords, with which assignment is often combined.
 - Comparison in JS is accomplished with the `==` (non-strict equality) and `===` (strict equality) operators.
   - `===` only returns true if both operands are the same value and type:
     - `1 === '1'` => false
@@ -140,23 +140,83 @@ function boo() {
 - In the code above:
   - During the creation phase JS encounters one declaration. `boo` in line 3. This is added to the global scope.
   - During the execution phase, in line 1, the function `boo()` is invoked. JS looks to the global scope because that is the scope in which `boo()` is found. That name is found since it was saved their during the creation phase. 
+
 ## 5. primitive values, types and type conversions/coercions
+
+- This seems like something I understand. I guess I don't have to memorize every combination of what implicitly converts what. But I should have tables to hand.
+
 ## 6. object properties and mutation
+
+- Sure, easy. compound objects and all that. 
+
 ## 7. understand the differences between loose and strict equality
+
+- right, it's either value is the same or value and type is the same, no?
+
 ## 8. how passing an argument into a function may or may not permanently change the value that a variable contains or points to
+
+- That would be a side-effect. It depends largely on whether the argument passed in points to a compound object or primitive value.
+
 ## 9. working with Strings, Arrays, and Objects. In particular, you should be thoroughly familiar with the basic Array iteration methods (forEach, map, filter, and find) and how to use Object methods to access the keys and values in an Object as an Array.
+
+- OK, I'll have to find a butt-load of problems for `forEach` `map` `filter` and `find`
+
 ## 10. understand that arrays are objects, and be able to determine whether you have an Array
+
+- `isArray` is the obvious choice. If that's not on the table then `typeof`. What else do you want?
+
 ## 11. variables as pointers
+
+- Same as Ruby stuff, no ? 
+
 ## 12. console.log vs return
+
+- fuck, are you retarded? This is obvious
+
 ## 13. truthiness: false and true vs. falsy and truthy
+
+- Yeah, I'm not a fucking idiot. Move along.
+
 ## 14. function definition and function invocation
+
+- Jesus christ, am I in coding for 6 year olds?
+
 ## 15. function declarations, function expressions, and arrow functions
+
+- This syntax I should brush up on, because it's bollocks.
+
 ## 16. implicit return value of function invocations
+
+- undefined, unless you `return` that shit.
+
 ## 17. first-class functions
+
+- What? 
+
 ## 18. partial function application
+
+- ...What ?
+
 ## 19. AND closures (says Mattic)
+
+- OK< yep
+
 ## 20. side effects
+
+-Fine, I'll make a list
+
 ## 21. naming conventions (legal vs idiomatic)
+
+- sure, I'll brush up on this boring assed-shit.
+
 ## 22. pure functions and side effects (overlap with above ?)
+
+- OK, looks interesting
+
 ## 23. strict mode vs. sloppy mode
+
+Hmmmmmmm, yep. In theory.
+
 ## 24. JavaScript syntactic sugar
+
+- Show me that shit one more time plaize.
