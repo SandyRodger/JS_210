@@ -1225,3 +1225,27 @@ console.log(`There are ${numberOfCharacters} characters in '${input}'.`);
 ## [Quiz](https://launchschool.com/lessons/7377ece4/assignments/fd281ca8)
 
 10/12 (83%)
+
+### 2nd attempt (1.6.24)
+
+6/12 (50%)
+
+ 1. A, B YES
+ 2. A, B AND D, the following works, it just ignores the console.log:
+
+```
+<script src="my-javascript.js">
+  console.log('Hello, World!');
+</script>
+```
+
+ 3. A, D YES
+ 4. A, B, C, D NO - all primitive values cannot be said to have a smaller size in memory than compound values, although most do. Large strings for example are primitive, but would obviously dwarf an empty array. And yes, `NaN` is a primitve value.
+ 5. A. There is also an expresson. ANYTHING TO THE RIGHT OF `=` IS AN EXPRESSION.
+ 6. C yes
+ 7. B yes
+ 8. B yes
+ 9. C NO - A, because when comparing a string and a number, JS coerces the string to a number regardless of whether the string contains number characters. Even if the result is `NaN`
+ 10. D NO - C
+ 11. B, D NO, not D, the `++` operator is not the key difference.
+ 12. D YES
