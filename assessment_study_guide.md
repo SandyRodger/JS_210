@@ -197,9 +197,9 @@ function boo() {
 
 - ...What ?
 
-## 19. AND closures (says Mattic)
+## 19. [AND closures (says Mattic)](https://github.com/SandyRodger/JS_210/blob/main/L2_functions_and_variable_scope.md#16closures)
 
-- OK< yep
+- Closures is like a photo taken at a baby's birth. Everyone around the bed (doctor, father, nurse, grandparent) is in the photo. The baby can therefore conjure any of these people for the rest of its life. That's the closure.
 
 ## 20. side effects
 
@@ -207,7 +207,7 @@ function boo() {
 
 ## 21. naming conventions (legal vs idiomatic)
 
-- sure, I'll brush up on this boring assed-shit.
+- sure, I'll brush up on this boring-assed shit.
 
 ## 22. pure functions and side effects (overlap with above ?)
 
