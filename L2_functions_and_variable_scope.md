@@ -1949,8 +1949,12 @@ console.log(typeof logValue); // string
 
 ## [Quiz](https://launchschool.com/lessons/7cd4abf4/assignments/d368f571)
 
-1.
-2.
+6/11 (55%)
+
+- 2nd attempt (1.6.24)
+
+1. c
+2. a, 
 3.
 4.
 5.
@@ -1960,5 +1964,3 @@ console.log(typeof logValue); // string
 9.
 10.
 11.
-
-6/11 (55%)
