@@ -10,7 +10,7 @@
 
 ### variable scope, especially how variables interact with function definitions and blocks
 
-- In the example below x is not declared, mererly assigned.
+- In the example below x is not declared, merely assigned.
 
 ```
 function foo() {
@@ -162,5 +162,5 @@ foo(x);
 ## chat
 
 - expression v statement
-- expression: any piece of that evaluates to a value.
-- Statement : any code that instructs a program to do something, but does not have a value. Such as `let y = (let x = 1);` or and `if` statement or `switch` or `let` or `return` without an argument.
+- expression: any piece of code that evaluates to a value.
+- Statement : any code that instructs a program to do something, but does not have a value. Such as `let y = (x = 1);` or and `if` statement or `switch` or `let` or `return` without an argument.
