@@ -23,7 +23,7 @@ You should be able to clearly explain the following topics:
 - Comparison in JS is accomplished with the `==` (non-strict equality) and `===` (strict equality) operators.
   - `===` only returns true if both operands are the same value and type. ie ` 1 === '1'`
   - `==` will return true if the operands are of different types, but the same values. ie ` 1 == '1'`
-  - When comparing compound objects the equality oprators evaluate whether the two oprands ar ethe same object, regardless of their content.
+  - When comparing compound objects the equality oprators evaluate whether the two operands are the same object, regardless of their content.
   - In order to compare the objects contained within, one would have to write one's own comparison function iterating through the values referenced within. ie:
 
 ```
@@ -45,6 +45,13 @@ function arraysEqual(left, right) {
 - When an array is compared with a non-array using `==`, the array is first implicitly converted into a string, then if the objects are still of different types more implicit conversions take place.
 
 ## variable scope, especially how variables interact with function definitions and blocks
+
+- A variable's scope is the part of the program that has access to the variable by name.
+- Every function or block creates a new scope for variables.
+- Unlike Ruby, variables declared in the global sope do not have to be passed into Javascript functions.
+- Block scope:
+  - variables declared inside blocks are not visible outside, but variables declared outside blocks are visible inside.
+- Programs have a hierarchy of scopes, which means you can shadow/hide variables in higher scopes, because JS will return the first variable it finds that matches the name.
 
 ## function scope
 ## hoisting
