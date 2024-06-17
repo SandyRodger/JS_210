@@ -249,7 +249,7 @@
   - [The Modern Approach](https://github.com/SandyRodger/JS_210/blob/main/L5_Objects.md#the-modern-approach)
 - [12 Practice Problem: Welcome Stranger](https://github.com/SandyRodger/JS_210/blob/main/L5_Objects.md#12-practice-problem-welcome-stranger)
 - [13 Practice Problem: Repeated Characters](https://github.com/SandyRodger/JS_210/blob/main/L5_Objects.md#13-practice-problem-repeated-characters)
-- [14 More Exercises](https://github.com/SandyRodger
+- [14 More Exercises](https://github.com/SandyRodger/JS_210/blob/main/L5_Objects.md#14more-exercises)
 
 ## [Writing better code](https://github.com/SandyRodger/JS_210/blob/main/L6_writing_better_code.md#writing-better-code)
 - [1 Douglas Crockford Lecture: The JavaScript Programming Language](https://github.com/SandyRodger/JS_210/blob/main/L6_writing_better_code.md#1-douglas-crockford-lecture-the-javascript-programming-language)
