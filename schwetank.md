@@ -4,9 +4,10 @@
 
 ### assignments and comparison
 
-- implicitly converts one to a the same type.  "implicit type coercion". This is quite unpredictable, so it's recommended to avoid this. 
+- implicitly converts one operand's type to match the other so they're the same type.
+- "implicit type coercion" is quite unpredictable, so it's recommended to avoid it. 
 - `let y = 1` this is declaration AND assignment
-- assignment will always return a boolean.
+- comparison will always return a boolean.
 
 ### variable scope, especially how variables interact with function definitions and blocks
 
@@ -23,7 +24,7 @@ foo(); // 2
 console.log(x); // 2
 ```
 
-- The assignment will assume strict mode is not running. 
+- The assessment will assume strict mode is not running. 
 
 ### function scope
 
@@ -31,7 +32,7 @@ console.log(x); // 2
 
 ### hoisting
 
-- Talk about the TDZ (the error messages will differ). Make sure you have an example and a spiel for this.
+- Talk about the TDZ (one indication of this is that the error messages will differ). Make sure you have an example and a spiel for this.
 
 ```
 console.log(x);
@@ -43,9 +44,7 @@ let x = 1;
 
 - float is not a primitive value. JS only has Numbers
 
-- Float, String, Boolean, Null, Undefined
-
-
+- Number, String, Boolean, Null, Undefined
 
 ### object properties and mutation
 
@@ -72,30 +71,9 @@ console.log(a);
 - Under the hood JS creates an object, calls a method on it and then deletes the object, even though it is a primitive (relevant for assessment? no). We cannot (should be) invoke methods on primitive.
 
 ```
-- Mutating the object:
-
-```
-let a = {
-  apple: 1,
-  orange: 2,
-}
-
-let b = a;
-
-console.log(a === b); // true
-console.log(a);
-
-a.apple = 3;
-
-console.log(a === b); // true
-console.log(a);
-```
-```
-
-- 
 
 ### understand the differences between loose and strict equality
-### how passing an argument into a function may or may not permanently change the value that a variable contains or points to
+### how passing an argument into a function may or may not permanently change the value that a variable contains or points to.
 
 ```
 function foo(x) {
@@ -113,7 +91,7 @@ console.log(y);
 // IN JS, WE DO NOT PASS VARIABLES
 // INSTEAD WE PASS VALUES
 
-// IN RUBY, WE DO
+// IN RUBY, WE DO PASS VARIABLES
 ```
 
 ### working with Strings, Arrays, and Objects. In particular, you should be thoroughly familiar with the basic Array iteration methods (forEach, map, filter, and find) and how to use Object methods to access the keys and values in an Object as an Array.
