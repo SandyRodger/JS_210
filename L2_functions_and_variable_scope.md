@@ -1458,6 +1458,7 @@ console.log(myWord); // Hello
 #### What does Pass-by-Value mean?
 
 - The variable hands over its value to the function and walks away unchanged. That means whatever happens in the function cannot change the original variable.
+- SHWETANK: Under the hood JS creates an object, calls a method on it and then deletes the object, even though it is a primitive (relevant for assessment? no). It should be impossible for us to invoke methods on primitive values. So it is necessary to create an object upon which to call methods.
 
 #### What does Pass-by-Reference mean?
 
