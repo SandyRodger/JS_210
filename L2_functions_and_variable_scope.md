@@ -272,7 +272,7 @@ function greet() {
 ```
 
 - REMEMBER: The code doesn't have to be run for the scope to exist.
-- All variables in the same or surrounding scopes are visible to each other, but not seperate functions/scopes:
+- All variables in the same or surrounding scopes are visible to each other, but not separate functions/scopes:
 
 ```
 function first() {
@@ -508,7 +508,7 @@ let foo = 1;
 console.log(foo);
 ```
 
-- It helps to think of scope as having two seperate, but related definitions: 'declared scope' and 'visibility scope'.
+- It helps to think of scope as having two separate, but related definitions: 'declared scope' and 'visibility scope'.
 
 ##### Declared scope:
 
