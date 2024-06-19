@@ -293,7 +293,7 @@ function xyzzy(foo, bar, qux) {
 
 ### Concise methods
 
-- Leave out `: function` when defining methods:
+- Leave out `function` when defining methods:
 
 ```
 let obj = {
