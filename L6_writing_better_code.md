@@ -192,7 +192,7 @@ read(400);
 
 ## [4	Strict Mode](https://launchschool.com/lessons/d299fc36/assignments/80093cbe)
 
-- `this` ? 
+- `this`
 
 ### What to focus on
 ### What does Strict mode do?
@@ -658,7 +658,7 @@ parseJSON(data);    // Logs "There was a SyntaxError parsing JSON data:
 - Only if:
   - A built in JS method can throw and error 
                     AND
-  - A simply guard clause is impossible/impractical.
+  - A simple guard clause is impossible/impractical.
 
 ### Further reading
 
