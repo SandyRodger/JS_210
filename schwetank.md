@@ -74,8 +74,6 @@ console.log(a);
 - "static method" v "instance method" ?
 - Under the hood JS creates an object, calls a method on it and then deletes the object, even though it is a primitive (relevant for assessment? no). We cannot (should be) invoke methods on primitive.
 
-```
-
 ### understand the differences between loose and strict equality
 ### how passing an argument into a function may or may not permanently change the value that a variable contains or points to.
 
