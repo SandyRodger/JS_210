@@ -295,3 +295,8 @@
 - [11 Course Feedback](https://github.com/SandyRodger/JS_210/blob/main/L6_writing_better_code.md#11course-feedback)
 
 ## [Assessment prep](https://github.com/SandyRodger/JS_210/blob/main/ass_prep.md)
+
+## Gaps in my knowledge:
+
+- Expressions, Statements and Declarations
+- 
