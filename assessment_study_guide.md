@@ -290,7 +290,21 @@ console.log(y);
 
 ## 9. working with Strings, Arrays, and Objects. In particular, you should be thoroughly familiar with the basic Array iteration methods (forEach, map, filter, and find) and how to use Object methods to access the keys and values in an Object as an Array.
 
-- OK, I'll have to find a butt-load of problems for `forEach` `map` `filter` and `find`
+### forEach
+
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+
+### map
+
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+
+### filter 
+
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+
+### find
+
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
 
 ## 10. understand that arrays are objects, and be able to determine whether you have an Array
 
@@ -298,23 +312,30 @@ console.log(y);
 
 ## 11. variables as pointers
 
-- Same as Ruby stuff, no ? 
+- [link to book](https://launchschool.com/books/javascript/read/more_stuff#variablesaspointers)
 
 ## 12. console.log vs return
 
-- fuck, are you retarded? This is obvious
+
 
 ## 13. truthiness: false and true vs. falsy and truthy
 
-- Yeah, I'm not a fucking idiot. Move along.
+
 
 ## 14. function definition and function invocation
 
-- Jesus christ, am I in coding for 6 year olds?
+
 
 ## 15. function declarations, function expressions, and arrow functions
 
-- This syntax I should brush up on, because it's bollocks.
+### Arrow functions:
+
+- Characterised by:
+  - Implicit return.
+  - Lexical `this` binding. (They inherit `this` from surrounding scope)
+  - No `arguments` object.
+  - Cannot be used with `new` keyword (ie as a constructor) because they have no `prototype` property.
+  - No `super` keyword.
 
 ## 16. implicit return value of function invocations
 
@@ -854,3 +875,19 @@ let e = (let f = 1);  // this gives an error, since a statement can't be used
 - L5:
   - If a function mutates one of its arguments, this is considered to be a side-effect.
   - If a function relies on a variable scoped outside of itself, it is not pure. So, yes pure functions can take arguments, but they cannot rely on variables scoped outside, because that would be something of a wild-card given that it might be a different value from one invocation to the next.
+
+## My blind-spots:
+
+- What is a callback function?
+  - A function that is passed as an argument to another function in Javascript. They are a crucial aspect of asynchronous programming.
+  - Here's how one might be used with an array:
+
+```
+let numbers = [1, 2, 3, 4, 5];
+
+let doubled = numbers.map(function(number) {
+  return number * 2;
+});
+
+console.log(doubled);  // Outputs: [2, 4, 6, 8, 10]
+```
