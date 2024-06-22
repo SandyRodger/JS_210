@@ -1950,18 +1950,29 @@ console.log(typeof logValue); // string
 
 ## [Quiz](https://launchschool.com/lessons/7cd4abf4/assignments/d368f571)
 
-6/11 (55%)
+- First: 6/11 (55%)
 
 - 2nd attempt (1.6.24)
 
-1. c
-2. a, 
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
-11.
+- 3rd attempt: 5/ 11 = 45%
+
+1. C - tick
+2. A, B - tick
+3. D, no C
+
+  - D is wrong because Function expressions aren't hoisted. The variable is saved and hoisted during the creation phase and then the function gets evaluated when the variable is accessed.
+  - C is right : Hoisting occurs when javascript processes variable and function declarations within a scope, before it executes any other code in that scope.
+
+4. A, B, E  - tick
+5. B and C
+  - C is right because lexical scoping is indeed also called 'static scoping'.
+6. C  - tick
+7. A - no, B
+  - The example shows dynamic typing. `foo` is reassigned, not shadowed.
+8. A  - tick
+9. B - no, D
+  - The log call on line 1 only happens after the `foo` call.
+10. A, B, C, D, E, F - no, only B, D
+  - A STATEMENT MUST BEGIN WITH THE `FUNCTION` KEY WORD TO BE A DECLARATION, even though in D the function declaration is nested inside another function.
+11. A, B, D - Actually B and C
+  - For A and D I confused declaration and expression. Declarations create variables, not expressions. Declarations will always have a name.
