@@ -259,7 +259,8 @@ console.log(a);
 
 ## 7. understand the differences between loose and strict equality
 
-- right, it's either value is the same or value and type is the same, no?
+- They act the same if both operands are the same type. If not, a loose equality operator will perform implicit conversions.
+- [List of implict conversions here](https://github.com/SandyRodger/JS_210/blob/main/L1_Javascript_basics.md#equality-operators)
 
 ## 8. how passing an argument into a function may or may not permanently change the value that a variable contains or points to
 
@@ -319,7 +320,8 @@ console.log(y);
 
 - undefined, unless you `return` that shit.
 
-## 17. first-class functions
+## 17. [first-class functions](https://github.com/SandyRodger/launch_school_books/blob/main/javascript.md#first-class-functions)
+
 
 SHWETANK:
 
@@ -337,47 +339,174 @@ function x() {
 foo(x);
 ```
 
-- functions are just like other values, they cna have their assignment passed to a function argument
-- This will be on the assessment - key concept. Know what you're going to say about it.
+- functions are just like other values, they can have their assignment passed to a function argument
+- This will be on the assessment
+- key concept. Know what you're going to say about it.
+- For example:
 
+```
+function foo(x) {
+  x();
+}
 
-## 18. partial function application
+function y() {
+  console.log('called y');
+}
 
-- ...What ?
+foo(y);
+```
 
+## 18. [Partial function application](https://github.com/SandyRodger/JS_210/blob/main/L2_functions_and_variable_scope.md#partial-function-application)
 ## 19. [AND closures (says Mattic)](https://github.com/SandyRodger/JS_210/blob/main/L2_functions_and_variable_scope.md#16closures)
 
-- Closures is like a photo taken at a baby's birth. Everyone around the bed (doctor, father, nurse, grandparent) is in the photo. The baby can therefore conjure any of these people for the rest of its life. That's the closure.
+- Writing functions in a way that their arguments can be added via different wrapping functions. This involves 3 distinct parts:
+
+1. A primary function:
+
+```
+const add = function(x, y) {
+  return x + y;
+}
+```
+
+2. A generator function:
+
+```
+function makeAdder(firstNumber) {
+  return function(secondNumber) {
+    return add(firstNumber, secondNumber);
+  };
+}
+```
+
+3. Applicatation:
+
+```
+let addFive = makeAdder(5);
+let addTen = makeAdder(10);
+
+console.log(addFive(3));  // 8
+console.log(addFive(55)); // 60
+console.log(addTen(3));   // 13
+console.log(addTen(55));  // 65
+```
+
+- This is one of the key applications of closures. When we define `makeAdder` the program takes a snapshot of the variables in its scope, including `firstNumber`. So even after `makeAdder` has finished executing, the returned functions retains access to `firstNumber` in their closures.
+- This is an example of using closures 
 
 ## 20. side effects
 
--Fine, I'll make a list
+- See #22
 
-## 21. naming conventions (legal vs idiomatic)
+## 21. [naming conventions (legal vs idiomatic)](https://github.com/SandyRodger/JS_210/blob/main/L3_practice_problems_logic_and_flow.md#naming-conventions)
 
-- sure, I'll brush up on this boring-assed shit.
+- Legal naming rules means how the code must be written in order for it work. Idiomatic rules is what is commonly accepted and therefore required for readability/maintainability.
+- camelCase
+  - Variables and Functions.
+  - Also imported function names, like `const readlineSync = require('readline-sync');`
+
+- SCREAMING_SNAKE_CASE
+  - constants
+
 
 ## 22. [pure functions and side effects](https://launchschool.com/lessons/79b41804/assignments/88138dd5)
 
 There are 5 side effects:
 
-1. reassigning variables outside itself (AKA 'non-local variable')
-2. Mutating the value of objects outside itself (AKA 'objects referenced by non-local variable')
-3. Reads from or writes to any data-entity outside your program (like files, network connection).
-4. Raises an exception.
-5. Calls a function that has side-effects
+1. **Reassigning** variables outside itself (AKA 'non-local variable')
+2. **Mutating** the value of objects outside itself (AKA 'objects referenced by non-local variable')
+3. **Reading** from or **writing** to any data-entity outside your program (like files, network connection).
+4. Raising an **exception**.
+5. **Calling a function that has side-effects**.
 
 - Technically side effects happen when you **call** a function, because it could be pure with some arguments and impure with others.
 - In practice we talk about functions **being** impure, because it usually isn't argument dependent.
 - Unexpected side effects are a major source of bugs.
 
 #### Side-efects through reassignment
+
+```
+let number = 42;
+function incrementNumber() {
+  number += 1; // side effect: number is defined in outer scope
+}
+```
+
 #### Side-effects through mutation
+
+```
+let letters = ['a', 'b', 'c'];
+function removeLast() {
+  letters.pop(); // side effect: alters the array referenced by letters
+}
+```
+
 #### Side effetcs through input/output
+
+- This is a super long list, but here it is (non-exhaustive):
+
+  - Reading from a file on the system's disk
+  - Writing to a file on the system's disk
+  - **Reading input from the keyboard**
+  - **Writing to the console**    are the two you need to remember.
+  - Accessing a database
+  - Updating the display on a web page
+  - Reading data from a form on a web page
+  - Sending data to a remote web site
+  - Receiving data from a remote web site
+  - Accessing system hardware such as:
+  - The mouse, trackpad, or other pointing devices
+  - The clock
+  - The random number generator
+  - The audio speakers
+  - The camera
+
 #### Side effects through exceptions
+
+- As you know.
+
 #### Side effects through other functions
+
+- Only if the side-effect effects outside the code. So not in the following example:
+
+```
+function insertNumberInOrder(arrayOfNumbers) {
+  arrayOfNumbers = arrayOfNumbers.slice(); // creates a copy of an array
+  arrayOfNumbers.push(arrayOfNumbers); // not a side effect since copy of array
+  arrayOfNumbers.sort((a, b) => a - b); // sort has side effects within function
+  return arrayOfNumbers; // function has no side effect
+}
+```
+
+- Common examples are:
+  - `console.log`
+  - `readline.question`
+  - `new Date()` because it accesses the clock
+  - `Math.random()` because it accesses the random number generator.
 #### Mixing side-effects and return values
+
+- Functions should EITHER return a useful value OR have a side-effect. Not both. Just because it complicates things. There are exceptions, kike reading a value from a database and returning that value.
+
 #### Pure functions
+
+- Have no side-effects
+- The return value depends solely on the arguments.
+- Example:
+
+```
+const square = value => value * value;
+```
+
+- A key part of this idea is that functions need only adhere to purity during their lifetime. This begins when the function is created and ends when it is destroyed.
+- Nested functions only exist for the duration of the outer function's execution. They are created every time the outer function is invoked and so may take different arguments and priduce different results. But they would still be pure.
+- A function can be pure while failing to return a useful value. For example:
+
+```
+function sum(a, b) {
+  a + b;
+}
+```
+
 ## 23. [strict mode vs. sloppy mode](https://launchschool.com/gists/406ba491)
 
 ### What is strict mode? How does it differ from sloppy mode?
@@ -663,12 +792,36 @@ function maxItem(first, ...moreArgs) {
 console.log(maxItem(2, 6, 10, 4, -3));
 ```
 
+## Gaps in my knowledge:
+
+### Expressions v Statements v declarations:
+
+- Expression: Any valid code that resolves to a value [link](https://launchschool.com/lessons/7377ece4/assignments/d84fdace)
+- Statement: Unlike expressions, statements in JS don't resolve to useful values, instead they control the execution of the program. So a variable assignment is an expression, but a variable declaration is a statement:
+
+```
+let a;                // a statement to declare variables
+let b;
+let c;
+let d = (a = 1);      // this works, because assignments are expressions too
+let e = (let f = 1);  // this gives an error, since a statement can't be used
+                      // as part of an expression
+```
+
+- Declaration: Writing a function or variable without assigning it to something. Even placing parentheses around a function declaration makes the whole thing an expression containing a declaration
+
+```javascript
+(function greetPeople() { // This is a function expression, not a declaration
+  console.log("Good Morning!");
+});
+```
+
 ## Mattic advice:
 
 - Build your own study guide in your own words
 - Practice terminology (phase 2)
 - (Phase 3) Go through official solutions and make sure it's fresh in your memory, ESPECIALLY TEST-CASES. "Something a bit funky from the exercises". Then paste in the concept from your list of concepts.
-- There will be trick-questions, testing for edge functinality.
+- There will be trick-questions, testing for edge functionality.
 - synthesis / describe in your own words - very important.
 
 - ## To do before assessment:
