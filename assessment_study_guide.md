@@ -824,13 +824,33 @@ let e = (let f = 1);  // this gives an error, since a statement can't be used
 - There will be trick-questions, testing for edge functionality.
 - synthesis / describe in your own words - very important.
 
-- ## To do before assessment:
+## To do before assessment:
 
 |  | complete | 2nd | 3rd |
 | :--- | :---: | :---: | :---: | 
 | "Build your own study guide in your own words" (Have written answers for all "specific topics of interest") |
 | Go through JS210 for a third time looking for gaps |
 | Find more problems to solve (Mattic?) / mock tests |
-| Attend at least 1 SPOT session|
+| Attend at least 1 SPOT session| yes
 | sift through Discussion pages for all 6 lessons.|
-| Re-do all the quizes twice. |
+| Re-do all the quizes | 22.6.24 |
+
+## Quiz mistakes (3rd go)
+
+- L1:
+  - A primitive value cannot be changed after being created, any operation that appears to do modify a string creates an entirely new string.
+  - Although is is true that the increment operator (`++`) leads to uncertain behaviour, this is not because of the presence or absence of the condition expression.
+- L2:
+  - Function expressions aren't hoisted. The variable is hoisted and when executed then the function declaration is evaluated.
+  - It is correct to say that hoisting occurs when javascript processes variable and function declarations within a scope, before it executes any other code in that scope.
+  - Lexical scoping is also known as 'static scoping'
+  - When a variable is reassigned, this is known as dynamic typing. Be careful not to confuse it with variable shadowing.
+  - When you see `console.lof(foo())` the function is called to completion before the `console.log()` method is called.
+  - If a function does not begin the line with the word `function` it is not a declaration, but an expression.
+  - Declarations will always create variables and therefore will have names. Not so for expressions.
+- L4:
+  - Bracket notation is an operator, not a method in JS.
+  - Silly mistake: arrays are zero-based.
+- L5:
+  - If a function mutates one of its arguments, this is considered to be a side-effect.
+  - If a function relies on a variable scoped outside of itself, it is not pure. So, yes pure functions can take arguments, but they cannot rely on variables scoped outside, because that would be something of a wild-card given that it might be a different value from one invocation to the next.
