@@ -734,3 +734,14 @@ console.log(inclusiveRand(100, 10));
 - Easy 4
 - Easy 5
 ## [15	Quiz](https://launchschool.com/lessons/79b41804/assignments/dbf1b1a1)
+
+- Attempt 2 (22.6.24)
+
+1. B - tick
+2. A - tick
+3. A, C, D - tick
+4. A, D - tick
+5. B, and C
+  - It is a side-effect if the function mutates one of its arguments. 
+6. A - no
+  - It is not a pure function as it relies on a variable that is not scoped locally to the function.
