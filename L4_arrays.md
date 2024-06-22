@@ -101,4 +101,17 @@ Array.isArray('array');   // false
 
 ## [13 Quiz](https://launchschool.com/lessons/e15c92bb/assignments/245c864a)
 
-1.
+- First attempt: 4/6
+- Second attempt:
+
+1. A - tick
+2. A, B, C, D - not D!
+  - because although it can return the first value - BRACKET NOTATION IS NOT AN OPERATOR
+3. B, C - tick
+4. D - tick
+5. D - tick
+6. A, - no, C:
+  - A is true, but doesn't completely describe it.
+  - C - I forgot that arrays are zero-based, so the first position is indeed even.
+
+
