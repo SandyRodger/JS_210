@@ -1249,3 +1249,32 @@ console.log(`There are ${numberOfCharacters} characters in '${input}'.`);
  10. D NO - C
  11. B, D NO, not D, the `++` operator is not the key difference.
  12. D YES
+
+quiz 3rd attempt (21.6.24) (83%):
+
+1. A, B - tick
+2. A, B, D - tick
+3. A, D - tick
+4. A, D - Also B:
+
+- A primitive value cannot be changed after being created:
+  - When you create a string, you cannot create its characters and any operation that appears to do so creates an entirely new string.
+
+5. C - tick
+6. C - tick
+7. B - tick
+8. B - tick
+9. A - A
+10. C - tick
+11. B, D - not D:
+
+- WRONG = "the ++ (increment) operator leads to uncertain behavior when the condition expression is missing"
+  - According to GPT:
+    -  the ++ operator is avoided because it can be confusing for those not familliar with `++i` (pre-increment) v `i++` (post-increment). An implicit behaviour is that while `i` is modified by both, in `i++` the original value is returned, whereas in `++i` the incremented value is returned.
+    -  It can lead to side-effects
+    -  Easy to overlook bugs
+    -  Not explicit
+    -  Some linters flag it
+  -  But the bottom line is: the reason it isn't unreliable is not because of the lack of a condition expression.
+
+12. D - tick
