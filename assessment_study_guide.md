@@ -306,6 +306,47 @@ console.log(y);
 
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
 
+## sort
+
+### [alphabeticNumberSort](https://launchschool.com/exercises/204b3efa?track=ruby)
+
+```
+function wordSort(num1, num2) {
+  const NUMBER_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five',
+                        'six', 'seven', 'eight', 'nine', 'ten', 'eleven',
+                        'twelve', 'thirteen', 'fourteen', 'fifteen',
+                        'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+
+  if (NUMBER_WORDS[num1] > NUMBER_WORDS[num2]) {
+    return 1;
+  } else if (NUMBER_WORDS[num1] < NUMBER_WORDS[num2]) {
+    return -1;
+  } else {
+    return 0;
+  }
+}
+
+function alphabeticNumberSort(array) {
+  return [...array].sort(wordSort);
+}
+```
+
+- `sort` is a "higher order function". That means it either takes or returns functions. `sort` takes a comparator function which tells it how to compare the elements in the array.
+- `[...array]` is an example of array deconstruction to create a shallow copy of the array.
+  - Shallow copies contain shared objects. That means changes to either will be relfected in the other(s).
+  - Deep copying on the other hand means although both objects contain identical objects, changes to either one will not happen to the other. Here's how you do it:
+
+```
+let arr = [{b: 'foo'}, ['bar']];
+let serializedArr = JSON.stringify(arr);
+let shallowCopiedArr = [...arr];
+let deepCopiedArr = JSON.parse(serializedArr);
+
+console.log(arr);
+console.log(serializedArr);
+console.log(deepCopiedArr);
+```
+
 ## 10. understand that arrays are objects, and be able to determine whether you have an Array
 
 - `isArray` is the obvious choice. If that's not on the table then `typeof`. What else do you want?
