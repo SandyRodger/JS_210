@@ -932,3 +932,6 @@ let doubled = numbers.map(function(number) {
 
 console.log(doubled);  // Outputs: [2, 4, 6, 8, 10]
 ```
+- Where exactly do we put and not put semi-colons.
+- I'm too dependent on for loops. Must study LS solutions and do lots with reduce and the like. 
+
