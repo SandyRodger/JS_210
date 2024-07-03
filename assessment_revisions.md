@@ -16,6 +16,15 @@ Brandi Seeley (TA)
 about 5 hours ago
 This isn't quite precise enough. Can you identify three concrete examples of said errors that don't throw errors in sloppy mode but do throw errors in strict mode?
 
+
+Revision:
+
+An example of sloppy mode allowing silent errors which could later cause problems is allowing variables to be initialized without being declared. If a variable is initialized without `let`, `var` or `const` it becomes a property of the global object. This means that it can easily be accessed accidentally later in the progam, causing errors. Strict mode raises an exception if variables are initialized without declaration.
+
+Another example is that in sloppy mode one can define two function parameters with the same name.
+
+Strict mode prevents some newer keywords, such as `let` and `static` from being used as variable names.
+
 ### 6
 
 Consider the following code:
@@ -38,6 +47,7 @@ Your Answer
 In line 1 a variable is declared with let and assigned to the string 'Hi'. In lines 3 to 5 the function greet() is defined. Then in line 7 greeting is reassigned to the string Hello. This demonstrates that Javascript is a dynamically typed language, meaning a variable can refer to a value of any data type and can be reassigned without throwing an exception (with the exception of const declared variables).
 
 So by the invocation of greet() on line 8 greeting has been reassigned to the string Hello and prints Hello, Jackie..
+
 Responses
 
 
@@ -46,6 +56,10 @@ about 5 hours ago
 This demonstrates that Javascript is a dynamically typed language, meaning a variable can refer to a value of any data type and can be reassigned without throwing an exception (with the exception of const declared variables).
 
 This isn't the correct concept. Can you try again to identify the concept that explains why greet utilizes the string 'Hello' instead of 'Hi', even though greeting referenced 'Hi' when greet was defined?
+
+My answer:
+
+This demonstrates the concept of closure, which states that functions retain access to the vriables in scope at their definition.
 
 ### 10
 
@@ -80,6 +94,10 @@ Responses
 Brandi Seeley (TA)
 about 5 hours ago
 One of your variables is misplaced in this answer. Can you try again?
+
+Answer:
+
+greeting is in the global scope because it is initialized without being declared.
 
 ### 11
 
